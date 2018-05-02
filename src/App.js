@@ -4,25 +4,42 @@ import React, { Component } from 'react';
 import cookie from './cookie.png';
 import './App.css';
 
+const colours = [
+  "#FF5252",
+  "#C2185B",
+  "#3949AB",
+  "#43A047",
+  "#FFC400"
+];
+
 // can define a component this way
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Clock/>
-        <Box label="Chocolate Chip" colour="#abc"/>
-        <Box label="Lemon Barley" colour="#123"/>
+        <Box label="Chocolate Chip"/>
+        <Box label="Lemon Barley"/>
       </div>
     );
   }
 }
 
 class Box extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {colour: colours[this.getRandomInt(0, 4)]};
+  }
+
+  getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
   render() {
     // className used to specify a CSS class, check App.css
     return (
       <div>
-        <header className="App-header" style={{backgroundColor: this.props.colour}}>
+        <header className="App-header" style={{backgroundColor: this.state.colour}}>
           <Cookie label={this.props.label}/>
         </header>
       </div>
