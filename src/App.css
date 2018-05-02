@@ -12,9 +12,8 @@ html {
 }
 
 .Box {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 6px;
+  display: inline-block;
+  margin: 6px;
   width: fit-content;
   height: 150px;
   padding: 20px;

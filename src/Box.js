@@ -24,18 +24,17 @@ class Box extends Component {
   render() {
     // className used to specify a CSS class, check App.css
     return (
-      <div>
-        <div className="Box" style={{backgroundColor: this.state.colour}}>
-          <Cookie label={this.props.label}/>
-        </div>
+      <div className="Box" style={{backgroundColor: this.state.colour}}>
+        <Cookie label={this.props.label}/>
       </div>
     );
   }
 }
 
 function Boxes(props) {
+  // render a Box for each item
   const boxes = props.boxes.map((item, index) => (
-    <Box key={item+index} label={item}/>
+    <Box key={item + index} label={item}/>
   ));
 
   return (
@@ -49,7 +48,7 @@ function Boxes(props) {
 function Cookie(props) {
   return (
     <div>
-      <img src={cookie} className="Cookie" alt="logo" />
+      <img src={cookie} className="Cookie" alt="logo"/>
       <h1 className="Label">{props.label} Cookies</h1>
     </div>
   );
