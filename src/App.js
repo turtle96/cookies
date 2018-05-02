@@ -10,8 +10,6 @@ class App extends Component {
     return (
       <div className="App">
         <Clock/>
-        {/*<Box label="Chocolate Chip"/>*/}
-        {/*<Box label="Lemon Barley"/>*/}
         <Order/>
       </div>
     );
