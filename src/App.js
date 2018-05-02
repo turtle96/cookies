@@ -50,6 +50,34 @@ class Clock extends React.Component {
     this.state = {date: new Date()};
   }
 
+  ///// lifecycle hooks setup
+
+  // runs after the component output has been rendered to the DOM
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
+  }
+
+  // called when a component is being removed from the DOM
+  componentWillUnmount() {
+    // clears the timer
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    // updates the state when called
+    // on setState() call
+    // React knows the state has changed, and calls the render() method again
+    this.setState({
+      date: new Date()
+    });
+
+    // do not modify this.state directly i.e. this.state.comment = 'Hello';
+    // State Updates May Be Asynchronous
+  }
+
   render() {
     return (
       <div>
