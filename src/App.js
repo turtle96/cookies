@@ -32,6 +32,7 @@ class Order extends Component {
   render() {
     return (
       <div>
+        <h1>Ordered: {this.state.boxes.length} boxes</h1>
         {
           this.state.boxes.map((item, index) => (
             <Box key={index} label={item}/>
