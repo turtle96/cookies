@@ -32,7 +32,7 @@ class Order extends Component {
   render() {
     return (
       <div>
-        <h1>Ordered: {this.state.boxes.length} boxes</h1>
+        <h1>Ordered: {this.state.boxes.length} {getBoxOrBoxes(this.state.boxes.length)}</h1>
         {
           this.state.boxes.map((item, index) => (
             <Box key={index} label={item}/>
@@ -41,6 +41,14 @@ class Order extends Component {
         <button onClick={this.handleClick} className="Button">Order</button>
       </div>
     );
+  }
+}
+
+function getBoxOrBoxes(length) {
+  if (length === 1) {
+    return "box";
+  } else {
+    return "boxes";
   }
 }
 
