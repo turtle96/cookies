@@ -13,7 +13,7 @@ const colours = [
 class Box extends Component {
   constructor(props) {
     super(props);
-    this.state = {colour: colours[this.getRandomInt(0, colours.length)]};
+    this.state = {colour: colours[this.getRandomInt(0, colours.length - 1)]};
   }
 
   getRandomInt(min, max) {
