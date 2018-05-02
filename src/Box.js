@@ -25,7 +25,7 @@ class Box extends Component {
     // className used to specify a CSS class, check App.css
     return (
       <div>
-        <header className="App-header" style={{backgroundColor: this.state.colour}}>
+        <header className="Box" style={{backgroundColor: this.state.colour}}>
           <Cookie label={this.props.label}/>
         </header>
       </div>
@@ -37,8 +37,8 @@ class Box extends Component {
 function Cookie(props) {
   return (
     <div>
-      <img src={cookie} className="App-logo" alt="logo" />
-      <h1 className="App-title">{props.label} Cookies</h1>
+      <img src={cookie} className="Cookie" alt="logo" />
+      <h1 className="Label">{props.label} Cookies</h1>
     </div>
   );
 }

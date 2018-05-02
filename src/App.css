@@ -6,26 +6,26 @@ html {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
+.Cookie {
+  animation: Spin-image infinite 20s linear;
   height: 80px;
 }
 
-.App-header {
+.Box {
   height: 150px;
   padding: 20px;
   color: white;
 }
 
-.App-title {
+.Label {
   font-size: 1.5em;
 }
 
-.App-intro {
+.Standard-text {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
+@keyframes Spin-image {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
