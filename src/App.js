@@ -1,16 +1,8 @@
 // All React components must act like pure functions with respect to their props.
 
 import React, { Component } from 'react';
-import cookie from './cookie.png';
 import './App.css';
-
-const colours = [
-  "#FF5252",
-  "#C2185B",
-  "#3949AB",
-  "#43A047",
-  "#FFC400"
-];
+import Box from "./Box";
 
 // can define a component this way
 class App extends Component {
@@ -23,38 +15,6 @@ class App extends Component {
       </div>
     );
   }
-}
-
-class Box extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {colour: colours[this.getRandomInt(0, 4)]};
-  }
-
-  getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  render() {
-    // className used to specify a CSS class, check App.css
-    return (
-      <div>
-        <header className="App-header" style={{backgroundColor: this.state.colour}}>
-          <Cookie label={this.props.label}/>
-        </header>
-      </div>
-    );
-  }
-}
-
-// or define a component this way
-function Cookie(props) {
-  return (
-    <div>
-      <img src={cookie} className="App-logo" alt="logo" />
-      <h1 className="App-title">{props.label} Cookies</h1>
-    </div>
-  );
 }
 
 // using component allows use of additional features such as local state and lifecycle hooks
