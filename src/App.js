@@ -1,6 +1,6 @@
 // All React components must act like pure functions with respect to their props.
 
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import Box from "./Box";
 import Clock from "./Clock";
@@ -10,8 +10,37 @@ class App extends Component {
     return (
       <div className="App">
         <Clock/>
-        <Box label="Chocolate Chip"/>
-        <Box label="Lemon Barley"/>
+        {/*<Box label="Chocolate Chip"/>*/}
+        {/*<Box label="Lemon Barley"/>*/}
+        <Order/>
+      </div>
+    );
+  }
+}
+
+class Order extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {boxes: []};
+
+    // This binding is necessary to make `this` work in the callback
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState({boxes: this.state.boxes.concat("Apple")});
+  }
+
+  render() {
+    console.log(this.state.boxes);
+    return (
+      <div>
+        {
+          this.state.boxes.map((item, index) => (
+            <Box key={index} label={item}/>
+          ))
+        }
+        <button onClick={this.handleClick} className="Button">Order</button>
       </div>
     );
   }
