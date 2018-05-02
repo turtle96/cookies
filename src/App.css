@@ -12,9 +12,14 @@ html {
 }
 
 .Box {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 6px;
+  width: fit-content;
   height: 150px;
   padding: 20px;
   color: white;
+  border-radius: 16px;
 }
 
 .Label {
