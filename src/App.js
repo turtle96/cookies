@@ -17,27 +17,27 @@ class App extends Component {
   }
 }
 
-// or define a component this way
-function Box(props) {
-  // className used to specify a CSS class, check App.css
-  return (
-    <div>
-      <header className="App-header" style={{backgroundColor: props.colour}}>
-        <Cookie label={props.label}/>
-      </header>
-    </div>
-  );
-}
-
-class Cookie extends Component {
+class Box extends Component {
   render() {
+    // className used to specify a CSS class, check App.css
     return (
       <div>
-        <img src={cookie} className="App-logo" alt="logo" />
-        <h1 className="App-title">{this.props.label} Cookies</h1>
+        <header className="App-header" style={{backgroundColor: this.props.colour}}>
+          <Cookie label={this.props.label}/>
+        </header>
       </div>
     );
   }
+}
+
+// or define a component this way
+function Cookie(props) {
+  return (
+    <div>
+      <img src={cookie} className="App-logo" alt="logo" />
+      <h1 className="App-title">{props.label} Cookies</h1>
+    </div>
+  );
 }
 
 // using component allows use of additional features such as local state and lifecycle hooks
