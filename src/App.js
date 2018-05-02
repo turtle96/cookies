@@ -32,7 +32,9 @@ class Order extends Component {
   render() {
     return (
       <div>
-        <h1>Ordered: {this.state.boxes.length} {getBoxOrBoxes(this.state.boxes.length)}</h1>
+        <h1 className="Label">
+          Ordered: {this.state.boxes.length} {getBoxOrBoxes(this.state.boxes.length)}
+        </h1>
         <Boxes boxes={this.state.boxes}/>
         <button onClick={this.handleClick} className="Button">Order</button>
       </div>
