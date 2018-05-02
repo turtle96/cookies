@@ -2,8 +2,8 @@
 
 import React, {Component} from 'react';
 import './App.css';
-import Box from "./Box";
 import Clock from "./Clock";
+import Boxes from "./Box";
 
 class App extends Component {
   render() {
@@ -33,11 +33,7 @@ class Order extends Component {
     return (
       <div>
         <h1>Ordered: {this.state.boxes.length} {getBoxOrBoxes(this.state.boxes.length)}</h1>
-        {
-          this.state.boxes.map((item, index) => (
-            <Box key={index} label={item}/>
-          ))
-        }
+        <Boxes boxes={this.state.boxes}/>
         <button onClick={this.handleClick} className="Button">Order</button>
       </div>
     );

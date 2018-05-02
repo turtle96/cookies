@@ -25,12 +25,24 @@ class Box extends Component {
     // className used to specify a CSS class, check App.css
     return (
       <div>
-        <header className="Box" style={{backgroundColor: this.state.colour}}>
+        <div className="Box" style={{backgroundColor: this.state.colour}}>
           <Cookie label={this.props.label}/>
-        </header>
+        </div>
       </div>
     );
   }
+}
+
+function Boxes(props) {
+  const boxes = props.boxes.map((item, index) => (
+    <Box key={item+index} label={item}/>
+  ));
+
+  return (
+    <div>
+      {boxes}
+    </div>
+  );
 }
 
 // or define a component this way
@@ -43,4 +55,4 @@ function Cookie(props) {
   );
 }
 
-export default Box;
+export default Boxes;
