@@ -9,6 +9,7 @@ const colours = [
   "#FFC400"
 ];
 
+// can define a component this way
 class Box extends Component {
   constructor(props) {
     super(props);
