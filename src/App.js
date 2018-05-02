@@ -10,8 +10,8 @@ class App extends Component {
     return (
       <div className="App">
         <Clock/>
-        <Box label="Chocolate Chip"/>
-        <Box label="Lemon Barley"/>
+        <Box label="Chocolate Chip" colour="#abc"/>
+        <Box label="Lemon Barley" colour="#123"/>
       </div>
     );
   }
@@ -22,7 +22,7 @@ function Box(props) {
   // className used to specify a CSS class, check App.css
   return (
     <div>
-      <header className="App-header">
+      <header className="App-header" style={{backgroundColor: props.colour}}>
         <Cookie label={props.label}/>
       </header>
     </div>
