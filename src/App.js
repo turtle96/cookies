@@ -32,7 +32,6 @@ class Order extends Component {
   }
 
   render() {
-    console.log(this.state.boxes);
     return (
       <div>
         {
