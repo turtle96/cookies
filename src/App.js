@@ -9,6 +9,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <header className="Header">
+            Let's Order Cookies
+        </header>
+
         <Clock/>
         <Order/>
       </div>
