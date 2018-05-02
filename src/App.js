@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import cookie from './cookie.png';
 import './App.css';
 
-const box = <Box label="Chocolate Chip"/>;
-
 // can define a component this way
 class App extends Component {
   render() {
-    return box;
+    return (
+      <div>
+        <Box label="Chocolate Chip"/>
+        <Box label="Lemon Barley"/>
+      </div>
+    );
   }
 }
 
