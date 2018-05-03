@@ -39,11 +39,13 @@ class OrderForm extends Component {
   }
 
   handleChange(event) {
-    this.setState({name: event.target.value});
+    this.setState({[event.target.name]: event.target.value});
   }
 
   handleSubmit(event) {
-    console.log('A name was submitted: ' + this.state.name);
+    console.log('Name submitted: ' + this.state.name);
+    console.log('Address submitted: ' + this.state.address);
+
     event.preventDefault();
   }
 
@@ -52,7 +54,11 @@ class OrderForm extends Component {
       <form onSubmit={this.handleSubmit}>
         <label>
           Name:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
+          <input type="text" name="name" value={this.state.value} onChange={this.handleChange} />
+        </label>
+        <label>
+          Address:
+          <input type="text" name="address" value={this.state.value} onChange={this.handleChange} />
         </label>
         <input type="submit" value="Submit" />
       </form>
