@@ -22,8 +22,40 @@ class Order extends Component {
           Ordered: {this.state.boxes.length} {getBoxOrBoxes(this.state.boxes.length)}
         </h1>
         <Boxes boxes={this.state.boxes}/>
+        <OrderForm/>
         <button onClick={this.handleClick} className="Button">Order</button>
       </div>
+    );
+  }
+}
+
+class OrderForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    console.log('A name was submitted: ' + this.state.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Name:
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
     );
   }
 }
