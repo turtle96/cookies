@@ -15,6 +15,7 @@ class App extends Component {
 
         <Clock/>
         <Order/>
+        <footer style={{margin: "6px"}}>© {new Date().getFullYear()}</footer>
       </div>
     );
   }
