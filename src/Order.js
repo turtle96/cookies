@@ -11,8 +11,8 @@ class Order extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
-    this.setState({boxes: this.state.boxes.concat("Apple")});
+  handleClick(item) {
+    this.setState({boxes: this.state.boxes.concat(item)});
   }
 
   render() {
@@ -23,10 +23,17 @@ class Order extends Component {
         </h1>
         <Boxes boxes={this.state.boxes}/>
         <OrderForm/>
-        <button onClick={this.handleClick} className="Button">Order</button>
+        <label>
+          Apple
+          <button onClick={this.handleClick.bind(this, "Apple")} className="Button">Order</button>
+        </label>
       </div>
     );
   }
+}
+
+class OrderOption extends Component {
+  
 }
 
 class OrderForm extends Component {
@@ -54,11 +61,13 @@ class OrderForm extends Component {
       <form onSubmit={this.handleSubmit}>
         <label>
           Name:
-          <input type="text" name="name" value={this.state.value} onChange={this.handleChange} />
+          <input type="text" name="name" value={this.state.value}
+                 onChange={this.handleChange} />
         </label>
         <label>
           Address:
-          <input type="text" name="address" value={this.state.value} onChange={this.handleChange} />
+          <input type="text" name="address" value={this.state.value}
+                 onChange={this.handleChange} />
         </label>
         <input type="submit" value="Submit" />
       </form>
