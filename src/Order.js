@@ -32,18 +32,18 @@ class Order extends Component {
 class OrderForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {name: ''};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({name: event.target.value});
   }
 
   handleSubmit(event) {
-    console.log('A name was submitted: ' + this.state.value);
+    console.log('A name was submitted: ' + this.state.name);
     event.preventDefault();
   }
 
