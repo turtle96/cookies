@@ -9,13 +9,23 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Main/>
+        <footer className="Footer">© {new Date().getFullYear()}</footer>
+      </div>
+    );
+  }
+}
+
+class Main extends Component {
+  render() {
+    return (
+      <div className="Main">
         <header className="Header">
-            Let's Order Cookies
+          Let's Order Cookies
         </header>
 
         <Clock/>
         <Order/>
-        <footer className="Footer">© {new Date().getFullYear()}</footer>
       </div>
     );
   }
