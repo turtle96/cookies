@@ -7,11 +7,10 @@ class Order extends Component {
     super(props);
     this.state = {boxes: []};
 
-    // This binding is necessary to make `this` work in the callback
-    this.handleClick = this.handleClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleClick(item) {
+  handleChange(item) {
     this.setState({boxes: this.state.boxes.concat(item)});
   }
 
@@ -23,17 +22,34 @@ class Order extends Component {
         </h1>
         <Boxes boxes={this.state.boxes}/>
         <OrderForm/>
-        <label>
-          Apple
-          <button onClick={this.handleClick.bind(this, "Apple")} className="Button">Order</button>
-        </label>
+        <OrderOption option="Apple" onChange={this.handleChange}/>
+        <OrderOption option="Chocolate Chip" onChange={this.handleChange}/>
       </div>
     );
   }
 }
 
 class OrderOption extends Component {
-  
+  constructor(props) {
+    super(props);
+    this.state = {option: ''};
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.props.onChange(this.props.option);
+  }
+
+  render() {
+    return (
+      <label>
+        {this.props.option}
+        <button onClick={this.handleClick}
+                className="Button">Order</button>
+      </label>
+    );
+  }
 }
 
 class OrderForm extends Component {
@@ -62,14 +78,14 @@ class OrderForm extends Component {
         <label>
           Name:
           <input type="text" name="name" value={this.state.value}
-                 onChange={this.handleChange} />
+                 onChange={this.handleChange}/>
         </label>
         <label>
           Address:
           <input type="text" name="address" value={this.state.value}
-                 onChange={this.handleChange} />
+                 onChange={this.handleChange}/>
         </label>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit"/>
       </form>
     );
   }
