@@ -45,8 +45,7 @@ class OrderOption extends Component {
     return (
       <label>
         {this.props.option}
-        <button onClick={this.handleClick}
-                className="Button">Order</button>
+        <button onClick={this.handleClick} className="Button">Order</button>
       </label>
     );
   }
