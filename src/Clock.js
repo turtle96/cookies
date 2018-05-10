@@ -7,7 +7,7 @@ class Clock extends React.Component {
     super(props);
 
     // assigns the initial this.state
-    this.state = {date: new Date()};
+    this.state = {date: new Date(Date.now())};
   }
 
   ///// lifecycle hooks setup
@@ -31,7 +31,7 @@ class Clock extends React.Component {
     // on setState() call
     // React knows the state has changed, and calls the render() method again
     this.setState({
-      date: new Date()
+      date: new Date(Date.now())
     });
 
     // do not modify this.state directly i.e. this.state.comment = 'Hello';
