@@ -5,13 +5,28 @@ import React from "react";
 class Order extends Component {
   constructor(props) {
     super(props);
-    this.state = {boxes: []};
+    this.state = {
+      boxes: [],
+      orders: {}
+    };
 
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(item) {
     this.setState({boxes: this.state.boxes.concat(item)});
+
+    let newOrders = this.state.orders;
+
+    if (!newOrders[item]) {
+      newOrders[item] = 0;
+    }
+
+    newOrders[item] = newOrders[item] + 1;
+
+    this.setState({orders: newOrders}, function () {
+      console.log(this.state.orders);
+    });
   }
 
   render() {
