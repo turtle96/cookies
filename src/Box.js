@@ -50,7 +50,7 @@ function Boxes(props) {
 // or define a component this way
 function Cookie(props) {
   return (
-    <img src={cookie} className="Cookie" alt="logo"/>
+    <img src={cookie} className="Cookie" alt="cookie"/>
   );
 }
 
