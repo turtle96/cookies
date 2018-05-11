@@ -22,9 +22,11 @@ class Box extends Component {
   }
 
   render() {
+    const styling = {backgroundColor: this.state.colour};
+
     // className used to specify a CSS class, check App.css
     return (
-      <div className="Box" style={{backgroundColor: this.state.colour}}>
+      <div className="Box" style={styling}>
         <Cookie />
         <h1 className="Label">{this.props.label} Cookies</h1>
       </div>
