@@ -72,7 +72,6 @@ it('render boxes with a colour and correct label', () => {
   expect(boxes.length).toEqual(3);
 
   boxes.children().forEach(function (item) {
-    console.log(item.props().style.backgroundColor);
     expect(item.props().style.backgroundColor).toBeDefined();
   });
 
