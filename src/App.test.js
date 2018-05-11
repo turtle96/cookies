@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import Clock from "./Clock";
 import {mount} from "enzyme";
+import Boxes from "./Box";
 
 let originalDateNow;
 
@@ -61,3 +62,25 @@ it('clock should advance by 1 second', () => {
   // time went forward 1 second
   expect(wrapper.state().date).toEqual(now);
 });
+
+it('render boxes with a colour and correct label', () => {
+  const samples = ["Lemon Tea", "Strawberry", "Apple Cinnamon"];
+  const wrapper = mount(<Boxes boxes={samples}/>);
+
+  const boxes = wrapper.find('Box');
+
+  expect(boxes.length).toEqual(3);
+
+  boxes.children().forEach(function (item) {
+    console.log(item.props().style.backgroundColor);
+    expect(item.props().style.backgroundColor).toBeDefined();
+  });
+
+  const renderedLabels = boxes.map(function (item) {
+    return item.props().label;
+  });
+
+  expect(renderedLabels).toEqual(samples);
+});
+
+//todo do snapshot testing
