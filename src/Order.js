@@ -2,6 +2,8 @@ import {Component} from "react";
 import Boxes from "./Box";
 import React from "react";
 
+const cookieTypes = ["Apple", "Chocolate Chip"];
+
 class Order extends Component {
   constructor(props) {
     super(props);
@@ -37,11 +39,22 @@ class Order extends Component {
         </h1>
         <Boxes boxes={this.state.boxes}/>
         <OrderForm/>
-        <OrderOption option="Apple" onChange={this.handleChange}/>
-        <OrderOption option="Chocolate Chip" onChange={this.handleChange}/>
+        <OrderCookieList list={cookieTypes} onChange={this.handleChange}/>
       </div>
     );
   }
+}
+
+function OrderCookieList(props) {
+  const cookieList = props.list.map(function (item, index) {
+    return (<OrderOption key={item + index} option={item} onChange={props.onChange}/>);
+  });
+
+  return (
+    <div>
+      {cookieList}
+    </div>
+  );
 }
 
 class OrderOption extends Component {
