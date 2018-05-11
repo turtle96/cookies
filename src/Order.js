@@ -2,7 +2,7 @@ import {Component} from "react";
 import Boxes from "./Box";
 import React from "react";
 
-const cookieTypes = ["Apple", "Chocolate Chip"];
+const cookieTypes = ["Apple", "Chocolate Chip", "Lemon Barley", "Oatmeal"];
 
 class Order extends Component {
   constructor(props) {

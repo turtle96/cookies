@@ -55,24 +55,44 @@ exports[`App match snapshot 1`] = `
           value="Submit"
         />
       </form>
-      <label>
-        Apple
-        <button
-          className="Button"
-          onClick={[Function]}
-        >
-          Order
-        </button>
-      </label>
-      <label>
-        Chocolate Chip
-        <button
-          className="Button"
-          onClick={[Function]}
-        >
-          Order
-        </button>
-      </label>
+      <div>
+        <label>
+          Apple
+          <button
+            className="Button"
+            onClick={[Function]}
+          >
+            Order
+          </button>
+        </label>
+        <label>
+          Chocolate Chip
+          <button
+            className="Button"
+            onClick={[Function]}
+          >
+            Order
+          </button>
+        </label>
+        <label>
+          Lemon Barley
+          <button
+            className="Button"
+            onClick={[Function]}
+          >
+            Order
+          </button>
+        </label>
+        <label>
+          Oatmeal
+          <button
+            className="Button"
+            onClick={[Function]}
+          >
+            Order
+          </button>
+        </label>
+      </div>
     </div>
   </div>
   <footer
