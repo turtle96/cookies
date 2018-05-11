@@ -4,6 +4,7 @@ import App from './App';
 import Clock from "./Clock";
 import {mount} from "enzyme";
 import Boxes from "./Box";
+import renderer from 'react-test-renderer';
 
 let originalDateNow;
 
@@ -23,6 +24,11 @@ beforeEach(function () {
 
 afterEach(function () {
   Date.now = originalDateNow;
+});
+
+it('App match snapshot', () => {
+  const tree = renderer.create(<App />).toJSON();
+  expect(tree).toMatchSnapshot();
 });
 
 it('renders without crashing', () => {
@@ -81,5 +87,3 @@ it('render boxes with a colour and correct label', () => {
 
   expect(renderedLabels).toEqual(samples);
 });
-
-//todo do snapshot testing
