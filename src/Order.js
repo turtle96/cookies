@@ -74,6 +74,7 @@ class OrderOption extends Component {
       <label>
         {this.props.option}
         <button onClick={this.handleClick} className="Button">Order</button>
+        <br/>
       </label>
     );
   }
@@ -107,6 +108,7 @@ class OrderForm extends Component {
           <input type="text" name="name" value={this.state.value}
                  onChange={this.handleChange}/>
         </label>
+        <br/>
         <label>
           Address:
           <input type="text" name="address" value={this.state.value}
