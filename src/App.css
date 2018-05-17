@@ -45,6 +45,27 @@ body {
   border-radius: 16px;
 }
 
+.Wrapper {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+.BoxesWrapper {
+  display: table-cell;
+  vertical-align: right;
+  width: 70%;
+  height: 100%;  
+}
+
+.OrderFormWrapper {
+  /*todo align left to right*/ 
+  display: table-cell;  
+  vertical-align: left;
+  width: 30%;
+  height: 100%;
+}
+
 .Label {
   font-size: 1.5em;
 }

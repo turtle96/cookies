@@ -37,9 +37,13 @@ class Order extends Component {
         <h1 className="Label">
           Ordered: {this.state.boxes.length} {getBoxOrBoxes(this.state.boxes.length)}
         </h1>
-        <Boxes boxes={this.state.boxes}/>
-        <OrderForm/>
-        <OrderCookieList list={cookieTypes} onChange={this.handleChange}/>
+        <div className="Wrapper">
+          <div className="OrderFormWrapper">
+            <OrderForm/>
+            <OrderCookieList list={cookieTypes} onChange={this.handleChange}/>
+          </div>
+          <Boxes className="BoxesWrapper" boxes={this.state.boxes}/>
+        </div>
       </div>
     );
   }
@@ -114,6 +118,7 @@ class OrderForm extends Component {
           <input type="text" name="address" value={this.state.value}
                  onChange={this.handleChange}/>
         </label>
+        <br/>
         <input type="submit" value="Submit"/>
       </form>
     );
