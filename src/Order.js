@@ -30,20 +30,15 @@ class Order extends Component {
 
     newOrders[item] = newOrders[item] + 1;
 
-    this.setState({orders: newOrders}, function () {
-      console.log(this.state.orders);
-    });
+    this.setState({orders: newOrders});
   }
 
   submitForm(name, address) {
-    if (!name && !address) {
+    if (!name || !address) {
       return;
     }
 
-    this.setState({name: name, address: address, show: true}, () => {
-      console.log('Name submitted: ' + this.state.name);
-      console.log('Address submitted: ' + this.state.address);
-    });   
+    this.setState({name: name, address: address, show: true});   
   }
 
   render() {
@@ -65,11 +60,18 @@ class Order extends Component {
   }
 
   renderSubmittedOrder() {
+    const orderList = Object.keys(this.state.orders).map((key, index) => {
+      return (<p key={key + index}>{key}: {this.state.orders[key]}</p>);
+    })
+
     if (this.state.show) {
       // todo style this
       return (
         <div>
-          <h1>Order:</h1>
+          <h2>Order list:</h2>
+          {orderList}
+
+          <h2>To be sent to:</h2>
           <p>Name: {this.state.name}</p>
           <p>Address: {this.state.address}</p>
         </div>
