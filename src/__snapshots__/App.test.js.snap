@@ -28,70 +28,105 @@ exports[`App match snapshot 1`] = `
          
         boxes
       </h1>
-      <div />
-      <form
-        onSubmit={[Function]}
+      <div
+        className="Wrapper"
       >
-        <label>
-          Name:
-          <input
-            name="name"
-            onChange={[Function]}
-            type="text"
-            value={undefined}
-          />
-        </label>
-        <label>
-          Address:
-          <input
-            name="address"
-            onChange={[Function]}
-            type="text"
-            value={undefined}
-          />
-        </label>
-        <input
-          type="submit"
-          value="Submit"
-        />
-      </form>
-      <div>
-        <label>
-          Apple
-          <button
-            className="Button"
-            onClick={[Function]}
+        <div
+          className="OrderFormWrapper"
+        >
+          <form
+            onSubmit={[Function]}
           >
-            Order
-          </button>
-        </label>
-        <label>
-          Chocolate Chip
-          <button
-            className="Button"
-            onClick={[Function]}
-          >
-            Order
-          </button>
-        </label>
-        <label>
-          Lemon Barley
-          <button
-            className="Button"
-            onClick={[Function]}
-          >
-            Order
-          </button>
-        </label>
-        <label>
-          Oatmeal
-          <button
-            className="Button"
-            onClick={[Function]}
-          >
-            Order
-          </button>
-        </label>
+            <label>
+              Name:
+              <input
+                name="name"
+                onChange={[Function]}
+                type="text"
+                value={undefined}
+              />
+            </label>
+            <br />
+            <label>
+              Address:
+              <input
+                name="address"
+                onChange={[Function]}
+                type="text"
+                value={undefined}
+              />
+            </label>
+            <br />
+            <input
+              className="Button"
+              type="submit"
+              value="Submit"
+            />
+          </form>
+          <div>
+            <div
+              className="OrderOption"
+            >
+              <label
+                className="OrderLabel"
+              >
+                Apple
+              </label>
+              <button
+                className="Button"
+                onClick={[Function]}
+              >
+                Order
+              </button>
+            </div>
+            <div
+              className="OrderOption"
+            >
+              <label
+                className="OrderLabel"
+              >
+                Chocolate Chip
+              </label>
+              <button
+                className="Button"
+                onClick={[Function]}
+              >
+                Order
+              </button>
+            </div>
+            <div
+              className="OrderOption"
+            >
+              <label
+                className="OrderLabel"
+              >
+                Lemon Barley
+              </label>
+              <button
+                className="Button"
+                onClick={[Function]}
+              >
+                Order
+              </button>
+            </div>
+            <div
+              className="OrderOption"
+            >
+              <label
+                className="OrderLabel"
+              >
+                Oatmeal
+              </label>
+              <button
+                className="Button"
+                onClick={[Function]}
+              >
+                Order
+              </button>
+            </div>
+          </div>
+        </div>
+        <div />
       </div>
     </div>
   </div>
