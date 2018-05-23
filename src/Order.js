@@ -86,7 +86,7 @@ function OrderOptionList(props) {
   });
 
   return (
-    <div>
+    <div className="OrderOptionList">
       {cookieList}
     </div>
   );
@@ -136,7 +136,7 @@ class OrderForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="OrderForm" onSubmit={this.handleSubmit}>
         <label>
           Name:
           <input type="text" name="name" value={this.state.value}
@@ -149,7 +149,7 @@ class OrderForm extends Component {
                  onChange={this.handleChange}/>
         </label>
         <br/>
-        <input type="submit" value="Submit" className="Button"/>
+        <input type="submit" value="Submit" className="Button" style={{margin: "6px"}}/>
       </form>
     );
   }
