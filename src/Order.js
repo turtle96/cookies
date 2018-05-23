@@ -9,10 +9,14 @@ class Order extends Component {
     super(props);
     this.state = {
       boxes: [],
-      orders: {}
+      orders: {},
+      name: '',
+      address: '',
+      show: false
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.submitForm = this.submitForm.bind(this);    
   }
 
   handleChange(item) {
@@ -31,6 +35,17 @@ class Order extends Component {
     });
   }
 
+  submitForm(name, address) {
+    if (!name && !address) {
+      return;
+    }
+
+    this.setState({name: name, address: address, show: true}, () => {
+      console.log('Name submitted: ' + this.state.name);
+      console.log('Address submitted: ' + this.state.address);
+    });   
+  }
+
   render() {
     return (
       <div>
@@ -39,13 +54,27 @@ class Order extends Component {
         </h1>
         <div className="Wrapper">
           <div className="OrderFormWrapper">
-            <OrderForm/>
+            <OrderForm submit={this.submitForm}/>
             <OrderOptionList list={cookieTypes} onChange={this.handleChange}/>
+            {this.renderSubmittedOrder()}
           </div>
           <Boxes className="BoxesWrapper" boxes={this.state.boxes}/>
         </div>
       </div>
     );
+  }
+
+  renderSubmittedOrder() {
+    if (this.state.show) {
+      // todo style this
+      return (
+        <div>
+          <h1>Order:</h1>
+          <p>Name: {this.state.name}</p>
+          <p>Address: {this.state.address}</p>
+        </div>
+      );
+    }
   }
 }
 
@@ -88,7 +117,7 @@ class OrderOption extends Component {
 class OrderForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {name: ''};
+    this.state = {name: '', address: ''};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -99,9 +128,7 @@ class OrderForm extends Component {
   }
 
   handleSubmit(event) {
-    console.log('Name submitted: ' + this.state.name);
-    console.log('Address submitted: ' + this.state.address);
-
+    this.props.submit(this.state.name, this.state.address);
     event.preventDefault();
   }
 

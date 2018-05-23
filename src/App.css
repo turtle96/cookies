@@ -102,7 +102,7 @@ body {
   border-radius: 4px;
 }
 
-button:focus {
+Button:focus {
   outline: none;
 }
 
