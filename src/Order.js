@@ -12,7 +12,7 @@ class Order extends Component {
       orders: {},
       name: '',
       address: '',
-      show: false
+      showSubmission: false
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -38,10 +38,16 @@ class Order extends Component {
       return;
     }
 
-    this.setState({name: name, address: address, show: true});   
+    this.setState({name: name, address: address, showSubmission: true});   
   }
 
   render() {
+    let displayOrderForm = "none";
+
+    if (!this.state.showSubmission) {
+      displayOrderForm = "block";
+    }
+
     return (
       <div>
         <h1 className="Label">
@@ -49,8 +55,10 @@ class Order extends Component {
         </h1>
         <div className="Wrapper">
           <div className="OrderFormWrapper">
-            <OrderForm submit={this.submitForm}/>
-            <OrderOptionList list={cookieTypes} onChange={this.handleChange}/>
+            <div style={{display: displayOrderForm}}>
+              <OrderForm show={!this.state.showSubmission} submit={this.submitForm}/>
+              <OrderOptionList list={cookieTypes} onChange={this.handleChange}/>
+            </div>
             {this.renderSubmittedOrder()}
           </div>
           <Boxes className="BoxesWrapper" boxes={this.state.boxes}/>
@@ -64,7 +72,7 @@ class Order extends Component {
       return (<p key={key + index}>{key}: {this.state.orders[key]}</p>);
     })
 
-    if (this.state.show) {
+    if (this.state.showSubmission) {
       // todo style this
       return (
         <div>
