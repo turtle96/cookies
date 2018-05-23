@@ -75,11 +75,13 @@ class OrderOption extends Component {
 
   render() {
     return (
-      <label>
-        {this.props.option}
-        <button onClick={this.handleClick} className="Button">Order</button>
-        <br/>
-      </label>
+      // todo fix the order option look
+      <div className="OrderOption">
+        <label className="OrderLabel">
+          {this.props.option}
+          <button onClick={this.handleClick} className="Button">Order</button>
+        </label>
+      </div>
     );
   }
 }

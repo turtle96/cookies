@@ -59,7 +59,6 @@ body {
 }
 
 .OrderFormWrapper {
-  /*todo align left to right*/ 
   display: table-cell;  
   vertical-align: left;
   width: 30%;
@@ -68,6 +67,17 @@ body {
 
 .Label {
   font-size: 1.5em;
+}
+
+.OrderLabel {
+  font-size: large;
+  color: white;
+}
+
+.OrderOption {
+  background-color: #8b6b61;
+  height: fit-content;
+  width: fit-content;
 }
 
 .Standard-text {
@@ -81,11 +91,15 @@ body {
 
 .Button {
   background-color: #5D4037;
-  font-size: larger;
+  font-size: large;
   color: white;
   padding: 6px 12px 6px;
   margin: 6px;
   border-radius: 4px;
+}
+
+button:focus {
+  outline: none;
 }
 
 .Footer {
