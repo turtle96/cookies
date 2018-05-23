@@ -49,6 +49,7 @@ body {
   width: 100%;
   height: 100%;
   display: table;
+  margin: 0 12px;
 }
 
 .BoxesWrapper {
@@ -72,12 +73,16 @@ body {
 .OrderLabel {
   font-size: large;
   color: white;
+  margin-right: 6px;
 }
 
 .OrderOption {
   background-color: #8b6b61;
   height: fit-content;
   width: fit-content;
+  margin: 6px;
+  padding: 6px;
+  border-radius: 4px;
 }
 
 .Standard-text {
@@ -93,8 +98,7 @@ body {
   background-color: #5D4037;
   font-size: large;
   color: white;
-  padding: 6px 12px 6px;
-  margin: 6px;
+  padding: 3px 6px 3px;
   border-radius: 4px;
 }
 

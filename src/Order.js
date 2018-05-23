@@ -40,7 +40,7 @@ class Order extends Component {
         <div className="Wrapper">
           <div className="OrderFormWrapper">
             <OrderForm/>
-            <OrderCookieList list={cookieTypes} onChange={this.handleChange}/>
+            <OrderOptionList list={cookieTypes} onChange={this.handleChange}/>
           </div>
           <Boxes className="BoxesWrapper" boxes={this.state.boxes}/>
         </div>
@@ -49,7 +49,7 @@ class Order extends Component {
   }
 }
 
-function OrderCookieList(props) {
+function OrderOptionList(props) {
   const cookieList = props.list.map(function (item, index) {
     return (<OrderOption key={item + index} option={item} onChange={props.onChange}/>);
   });
@@ -75,12 +75,11 @@ class OrderOption extends Component {
 
   render() {
     return (
-      // todo fix the order option look
       <div className="OrderOption">
         <label className="OrderLabel">
           {this.props.option}
-          <button onClick={this.handleClick} className="Button">Order</button>
         </label>
+        <button onClick={this.handleClick} className="Button">Order</button>
       </div>
     );
   }
@@ -121,7 +120,7 @@ class OrderForm extends Component {
                  onChange={this.handleChange}/>
         </label>
         <br/>
-        <input type="submit" value="Submit"/>
+        <input type="submit" value="Submit" className="Button"/>
       </form>
     );
   }
