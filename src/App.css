@@ -53,17 +53,16 @@ body {
 
 .BoxesWrapper {
   display: table-cell;
-  vertical-align: right;
   width: 70%;
-  height: 100%;  
+  height: 100%;
 }
 
 .OrderFormWrapper {
-  display: table-cell;  
+  display: table-cell;
   text-align: left;
   width: 30%;
   height: 100%;
-  padding-left: 12px;  
+  padding-left: 12px;
 }
 
 .OrderForm input[type=text] {
@@ -82,16 +81,18 @@ body {
 .OrderLabel {
   font-size: large;
   color: white;
-  margin-right: 6px;
+  flex: 1;
 }
 
 .OrderOption {
   background-color: #8b6b61;
-  height: fit-content;
-  width: fit-content;
-  margin: 6px;
+  height: 100%;
+  width: 100%;
+  margin: 6px 0;
   padding: 6px;
   border-radius: 4px;
+  display: flex;
+  align-items: center;
 }
 
 .OrderOptionList {
@@ -111,12 +112,17 @@ body {
   background-color: #5D4037;
   font-size: large;
   color: white;
-  padding: 3px 6px 3px;
+  padding: 6px 12px 6px;
+  border: 0;
   border-radius: 4px;
 }
 
 Button:focus {
   outline: none;
+}
+
+Button:hover {
+  cursor: pointer;
 }
 
 .Footer {

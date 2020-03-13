@@ -157,7 +157,7 @@ class OrderForm extends Component {
                  onChange={this.handleChange}/>
         </label>
         <br/>
-        <input type="submit" value="Submit" className="Button" style={{margin: "6px"}}/>
+        <button type="submit" className="Button" style={{margin: "6px"}}>Submit</button>
       </form>
     );
   }
