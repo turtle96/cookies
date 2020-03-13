@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import cookie from './cookie.png';
 
 const colours = [
   "#FF5252",
@@ -49,8 +48,9 @@ function Boxes(props) {
 
 // or define a component this way
 function Cookie(props) {
+  const imageUrl = `${process.env.PUBLIC_URL}/images/cookie.png`;
   return (
-    <img src={cookie} className="Cookie" alt="cookie"/>
+    <img src={imageUrl} className="Cookie" alt="cookie"/>
   );
 }
 
