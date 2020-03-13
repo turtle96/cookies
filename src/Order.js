@@ -50,7 +50,7 @@ class Order extends Component {
 
     return (
       <div>
-        <h1 className="Label">
+        <h1>
           Ordered: {this.state.boxes.length} {getBoxOrBoxes(this.state.boxes.length)}
         </h1>
         <div className="Wrapper">
@@ -145,13 +145,13 @@ class OrderForm extends Component {
   render() {
     return (
       <form className="OrderForm" onSubmit={this.handleSubmit}>
-        <label>
+        <label className="Label">
           Name:
           <input type="text" name="name" value={this.state.value}
                  onChange={this.handleChange}/>
         </label>
         <br/>
-        <label>
+        <label className="Label">
           Address:
           <input type="text" name="address" value={this.state.value}
                  onChange={this.handleChange}/>

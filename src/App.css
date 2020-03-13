@@ -5,6 +5,22 @@ html {
 
 body {
   height: 100%;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 24px;
+}
+
+button {
+  font-size: 24px;
+  font-family: 'Nanum Pen Script', cursive;
+}
+
+input {
+  font-size: 24px;
+  font-family: 'Nanum Pen Script', cursive;
+}
+
+header {
+  font-family: 'Baloo Thambi 2', cursive;
 }
 
 #root {
@@ -25,7 +41,7 @@ body {
 .Header {
   background-color: #5D4037;
   color: white;
-  font-size: xx-large;
+  font-size: 3em;
   padding: 48px;
 }
 
@@ -72,15 +88,20 @@ body {
   margin: 8px 0;
   box-sizing: border-box;
   border-radius: 4px;
-  font-size: medium;
 }
 
 .Label {
-  font-size: 1.5em;
+  font-size: 1.2em;
+}
+
+.BoxLabel {
+  font-family: 'Baloo Thambi 2', cursive;
+  font-size: 1em;
+  margin: 0;
 }
 
 .OrderLabel {
-  font-size: large;
+  font-size: 1.2em;
   flex: 1;
 }
 
@@ -99,8 +120,8 @@ body {
   margin-top: 12px;
 }
 
-.Standard-text {
-  font-size: large;
+.StandardText {
+  font-size: 1em;
 }
 
 @keyframes Spin-image {
@@ -109,7 +130,7 @@ body {
 }
 
 .Button {
-  font-size: large;
+  font-size: 1.2em;
   color: #30211c;
   padding: 6px 12px 6px;
   border-radius: 4px;

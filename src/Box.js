@@ -28,7 +28,7 @@ class Box extends Component {
     return (
       <div className="Box" style={styling}>
         <Cookie />
-        <h1 className="Label">{this.props.label} Cookies</h1>
+        <h1 className="BoxLabel">{this.props.label} Cookies</h1>
       </div>
     );
   }
