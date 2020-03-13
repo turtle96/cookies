@@ -6,16 +6,16 @@ html {
 body {
   height: 100%;
   font-family: 'Nanum Pen Script', cursive;
-  font-size: 24px;
+  font-size: 28px;
 }
 
 button {
-  font-size: 24px;
+  font-size: 28px;
   font-family: 'Nanum Pen Script', cursive;
 }
 
 input {
-  font-size: 24px;
+  font-size: 28px;
   font-family: 'Nanum Pen Script', cursive;
 }
 
@@ -90,10 +90,6 @@ header {
   border-radius: 4px;
 }
 
-.Label {
-  font-size: 1.2em;
-}
-
 .BoxLabel {
   font-family: 'Baloo Thambi 2', cursive;
   font-size: 1em;
@@ -101,7 +97,6 @@ header {
 }
 
 .OrderLabel {
-  font-size: 1.2em;
   flex: 1;
 }
 
@@ -120,17 +115,12 @@ header {
   margin-top: 12px;
 }
 
-.StandardText {
-  font-size: 1em;
-}
-
 @keyframes Spin-image {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
 .Button {
-  font-size: 1.2em;
   color: #30211c;
   padding: 6px 12px 6px;
   border-radius: 4px;

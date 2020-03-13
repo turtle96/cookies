@@ -16,7 +16,7 @@ class Order extends Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.submitForm = this.submitForm.bind(this);    
+    this.submitForm = this.submitForm.bind(this);
   }
 
   handleChange(item) {
@@ -38,7 +38,7 @@ class Order extends Component {
       return;
     }
 
-    this.setState({name: name, address: address, showSubmission: true});   
+    this.setState({name: name, address: address, showSubmission: true});
   }
 
   render() {
@@ -80,8 +80,12 @@ class Order extends Component {
           {orderList}
 
           <h2>To be sent to:</h2>
-          <p>Name: {this.state.name}</p>
-          <p>Address: {this.state.address}</p>
+          <p>
+            Name: {this.state.name}
+          </p>
+          <p>
+            Address: {this.state.address}
+          </p>
         </div>
       );
     }
@@ -145,13 +149,13 @@ class OrderForm extends Component {
   render() {
     return (
       <form className="OrderForm" onSubmit={this.handleSubmit}>
-        <label className="Label">
+        <label>
           Name:
           <input type="text" name="name" value={this.state.value}
                  onChange={this.handleChange}/>
         </label>
         <br/>
-        <label className="Label">
+        <label>
           Address:
           <input type="text" name="address" value={this.state.value}
                  onChange={this.handleChange}/>
