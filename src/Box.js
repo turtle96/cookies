@@ -41,7 +41,7 @@ function Boxes(props) {
   ));
 
   return (
-    <div>
+    <div className="BoxesWrapper">
       {boxes}
     </div>
   );

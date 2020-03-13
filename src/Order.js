@@ -61,7 +61,7 @@ class Order extends Component {
             </div>
             {this.renderSubmittedOrder()}
           </div>
-          <Boxes className="BoxesWrapper" boxes={this.state.boxes}/>
+          <Boxes boxes={this.state.boxes}/>
         </div>
       </div>
     );
