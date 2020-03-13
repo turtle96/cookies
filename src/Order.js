@@ -70,7 +70,7 @@ class Order extends Component {
   renderSubmittedOrder() {
     const orderList = Object.keys(this.state.orders).map((key, index) => {
       return (<p key={key + index}>{key}: {this.state.orders[key]}</p>);
-    })
+    });
 
     if (this.state.showSubmission) {
       // todo style this
