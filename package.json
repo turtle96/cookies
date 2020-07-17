@@ -18,5 +18,8 @@
   },
   "setupFiles": [
     "<rootDir>/src/setupTests.js"
-  ]
+  ],
+  "devDependencies": {
+    "prettier": "2.0.5"
+  }
 }
