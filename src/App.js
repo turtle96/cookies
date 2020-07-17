@@ -6,29 +6,32 @@ import Clock from "./Clock";
 import Order from "./Order";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Main/>
-        <footer className="Footer">© {new Date().getFullYear()}</footer>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="App">
+                <Main/>
+                <footer className="Footer">© {new Date().getFullYear()}</footer>
+            </div>
+        );
+    }
 }
 
 class Main extends Component {
-  render() {
-    return (
-      <div className="Main">
-        <header className="Header">
-          Let's Order Cookies
-        </header>
+    render() {
 
-        <Clock/>
-        <Order/>
-      </div>
-    );
-  }
+        return (
+            <div className="Main">
+                <header className="Header">
+                    <a href={"/"}>
+                        Let's Order Cookies
+                    </a>
+                </header>
+
+                <Clock/>
+                <Order/>
+            </div>
+        );
+    }
 }
 
 export default App;
