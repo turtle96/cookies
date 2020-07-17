@@ -1,148 +1,157 @@
 html {
-  background-image: url(./images/linedpaper.png);
-  height: 100%;
+    background-image: url(./images/linedpaper.png);
+    height: 100%;
 }
 
 body {
-  height: 100%;
-  font-family: 'Nanum Pen Script', cursive;
-  font-size: 28px;
+    height: 100%;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 28px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 button {
-  font-size: 28px;
-  font-family: 'Nanum Pen Script', cursive;
+    font-size: 28px;
+    font-family: 'Nanum Pen Script', cursive;
 }
 
 input {
-  font-size: 28px;
-  font-family: 'Nanum Pen Script', cursive;
+    font-size: 28px;
+    font-family: 'Nanum Pen Script', cursive;
 }
 
 header {
-  font-family: 'Baloo Thambi 2', cursive;
+    font-family: 'Baloo Thambi 2', cursive;
 }
 
 #root {
-  height: 100%;
+    height: 100%;
 }
 
 .App {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
 }
 
 .Main {
-  flex: 1;
+    flex: 1;
 }
 
 .Header {
-  background-color: #5D4037;
-  color: white;
-  font-size: 3em;
-  padding: 48px;
+    background-color: #5D4037;
+    color: white;
+    font-size: 2.5em;
+    padding: 48px;
 }
 
 .Cookie {
-  animation: Spin-image infinite 20s linear;
-  height: 80px;
+    animation: Spin-image infinite 20s linear;
+    height: 80px;
 }
 
 .Box {
-  display: inline-block;
-  vertical-align: top;
-  margin: 6px;
-  width: 180px;
-  height: 150px;
-  padding: 20px;
-  color: white;
-  border-radius: 16px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 6px;
+    width: 180px;
+    height: 150px;
+    padding: 20px;
+    color: white;
+    border-radius: 16px;
 }
 
 .Wrapper {
-  width: 100%;
-  height: 100%;
-  display: table;
+    width: 100%;
+    height: 100%;
+    display: table;
 }
 
 .BoxesWrapper {
-  display: table-cell;
-  width: 75%;
-  height: 100%;
-  padding: 0 12px;
+    display: table-cell;
+    width: 75%;
+    height: 100%;
+    padding: 0 12px;
 }
 
 .OrderFormWrapper {
-  display: table-cell;
-  text-align: left;
-  width: 25%;
-  height: 100%;
-  padding-left: 12px;
+    display: table-cell;
+    text-align: left;
+    width: 25%;
+    height: 100%;
+    padding-left: 12px;
 }
 
 .OrderForm input[type=text] {
-  width: 100%;
-  padding: 6px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border-radius: 4px;
+    width: 100%;
+    padding: 6px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
 
 .BoxLabel {
-  font-family: 'Baloo Thambi 2', cursive;
-  font-size: 1em;
-  margin: 0;
+    font-family: 'Baloo Thambi 2', cursive;
+    font-size: 1em;
+    margin: 0;
 }
 
 .OrderLabel {
-  flex: 1;
+    flex: 1;
 }
 
 .OrderOption {
-  height: 100%;
-  width: auto;
-  margin: 6px 0;
-  padding: 6px;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  border: 2px solid #906355;
+    height: 100%;
+    width: auto;
+    margin: 6px 0;
+    padding: 6px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #906355;
 }
 
 .OrderOptionList {
-  margin-top: 12px;
+    margin-top: 12px;
 }
 
 @keyframes Spin-image {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .Button {
-  color: #30211c;
-  padding: 6px 12px 6px;
-  border-radius: 4px;
-  border: 2px solid #5D4037;
+    color: #30211c;
+    padding: 6px 12px 6px;
+    border-radius: 4px;
+    border: 2px solid #5D4037;
 }
 
-Button:focus {
-  outline: none;
-  color: white;
-  background-color: #5D4037;
+Button:active {
+    outline: none;
+    color: white;
+    background-color: #5D4037;
 }
 
 Button:hover {
-  cursor: pointer;
-  color: white;
-  background-color: #5D4037;
+    cursor: pointer;
+    color: white;
+    background-color: #5D4037;
 }
 
 .Footer {
-  flex: 0;
-  background-color: #5D4037;
-  color: white;
-  width: 100%;
-  padding: 6px 0 6px;
+    flex: 0;
+    background-color: #5D4037;
+    color: white;
+    width: 100%;
+    padding: 6px 0 6px;
 }
