@@ -160,6 +160,7 @@ Button:hover {
     color: white;
     width: 100%;
     padding: 6px 0 6px;
+    margin-top: 24px;
 }
 
 .Alert {
