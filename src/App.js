@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 import './App.css';
 import Clock from "./Clock";
 import Order from "./Order";
+import shop from "./images/shop.svg";
 
 class App extends Component {
     render() {
@@ -25,6 +26,7 @@ class Main extends Component {
                     <a href={"/"}>
                         Let's Order Cookies
                     </a>
+                    <img src={shop}/>
                 </header>
 
                 <Clock/>

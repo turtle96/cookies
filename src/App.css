@@ -50,6 +50,12 @@ header {
     padding: 48px;
 }
 
+.Header img {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
 .Cookie {
     animation: Spin-image infinite 20s linear;
     height: 80px;
