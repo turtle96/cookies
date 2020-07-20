@@ -84,7 +84,7 @@ header {
     text-align: left;
     width: 25%;
     height: 100%;
-    padding-left: 12px;
+    padding-left: 24px;
 }
 
 .OrderForm input[type=text] {
@@ -136,7 +136,7 @@ header {
     border: 2px solid #5D4037;
 }
 
-Button:active {
+Button:focus {
     outline: none;
     color: white;
     background-color: #5D4037;
@@ -154,4 +154,9 @@ Button:hover {
     color: white;
     width: 100%;
     padding: 6px 0 6px;
+}
+
+.Alert {
+    padding: 12px 0 12px;
+    text-decoration: underline solid darkred;
 }
